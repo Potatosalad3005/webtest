@@ -9,7 +9,7 @@ body{
 }
 
 section#homehero {
-    background: url('/images/truck1.jpg') no-repeat center center/cover;
+    background: url('images/truck1.jpg') no-repeat center center/cover;
     height: 109dvh;
     display: flex;
     justify-content: flex-start;
