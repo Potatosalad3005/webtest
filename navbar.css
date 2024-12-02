@@ -1,0 +1,1023 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+}
+
+section#homehero {
+    background: url('/images/truck1.jpg') no-repeat center center/cover;
+    height: 109dvh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    color: white;
+    text-align: center;
+    position: relative;
+    padding: 2em;
+    overflow: hidden;
+    margin-top: -60px;
+    padding-top: 60px;
+    background-position: 60% 40%;
+}
+
+@media(max-width: 768px) {
+    .header {
+        height: 938px;
+    }
+}
+
+#homeabout {
+    padding: 50px;
+    background-color: #ffffff;
+    text-align: left;
+}
+
+#homeabout h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ff9e00; /* Orange color for heading */
+}
+
+#homeabout p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: rgba(0, 0, 0, 0); /* Slight transparency for better visibility */
+    color: white;
+    position: fixed; /* Changed from sticky to fixed */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 60px;
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    height: 50px;
+}
+
+nav ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #ffcd04;
+    display: block;
+    margin: auto;
+    transition: 0.3s;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li:hover::after {
+    width: 100%;
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li{
+    width: 100%;
+}
+.sidebar a{
+    width: 100%;
+}
+
+.menu-button{
+    display: none;
+}
+
+@media(max-width: 768px){
+    .hideOnMobile{
+        display: none;
+    }
+    .menu-button{
+        display: block;
+    }
+}
+
+@media(max-width: 400px){
+    .sidebar{
+        width: 100%;
+    }
+}
+
+
+.course{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+
+
+ /* Container for the slideshow */
+ .slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Slides - each representing a page */
+.slide {
+    display: none;
+    position: relative;
+}
+
+/* Images in the slideshow */
+.slide img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+/* Add tint to the image */
+.slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Black tint with 40% opacity */
+    z-index: 1; /* Ensure the overlay is above the image but below the text */
+}
+
+/* Text overlay on each image */
+.text-overlay {
+    position: absolute;
+    bottom: 30px;
+    left: 50px;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    z-index: 2; /* Ensure text appears above the overlay */
+}
+
+/* Slideshow navigation buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+    z-index: 2; /* Make sure the buttons are above the overlay */
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Hover effects for navigation buttons */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.active {
+    background-color: #717171;
+}
+
+
+
+.services-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.service-container {
+    text-align: center;
+    width: 250px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.service-container svg { 
+    margin-bottom: 10px;
+}
+
+h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+
+/* about section start */
+section#about-hero {
+    background: url('AboutUs/peoples.jpg') no-repeat center center/cover;
+    height: 65dvh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    color: white;
+    text-align: center;
+    position: relative;
+    padding: 2em;
+    overflow: hidden;
+    animation: zoomOutBackground 5s forwards;
+    margin-top: -60px;
+    padding-top: 60px;
+    background-position: 60% 40%;
+}
+
+@keyframes zoomOutBackground{
+    0%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+section#about-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: Add a semi-transparent overlay */
+    z-index: 1;
+}
+
+section#about-hero .hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 2em;
+    animation: fadeIn 2s ease-in-out;
+}
+
+section#about-hero h1 {
+    font-size: 4em; /* Make the text huge */
+    margin: 0;
+    position: relative;
+    white-space: nowrap;
+    bottom: 20px;
+    left: 20px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Optional: Add a slight slide-up effect */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section#about {
+    padding: 2em;
+    text-align: center;
+}
+
+section#about .content {
+    background: white;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Existing CSS */
+
+/* Add the following CSS for the client logos section */
+
+#clients {
+    background-color: #f4f4f4;
+    padding: 2em 0;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+#clients h2 {
+    margin-bottom: 1em;
+    font-size: 2em;
+    color: #333;
+}
+
+.client-logos {
+    display: flex;
+    overflow: hidden;
+    cursor: grab;
+}
+
+.logos {
+    display: flex;
+    white-space: nowrap;
+    transition: transform 0.3s ease;
+}
+
+.client-logos img {
+    max-height: 100px;
+    margin: 0 1em;
+    user-select: none;
+}
+/* about section end */
+
+
+
+/* services section begin */
+
+#services-hero {
+    background: url('services/headser.jpg') no-repeat center center/cover;
+    height: 65vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    color: white;
+    text-align: center;
+    position: relative;
+    padding: 2em;
+    overflow: hidden;
+    animation: zoomOutBackground 5s forwards;
+    margin-top: -60px;
+    padding-top: 60px;
+    background-position: 60% 40%;
+}
+
+#services-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: Add a semi-transparent overlay */
+    z-index: 1;
+}
+
+#services-hero .hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 2em;
+    animation: fadeIn 2s ease-in-out;
+}
+
+#services-hero h1 {
+    font-size: 4em;
+    margin: 0;
+    position: relative;
+    bottom: 20px;
+    left: 20px;
+}
+
+@keyframes zoomOutBackground {
+    0% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Services Section */
+
+#services-intro {
+    text-align: center;
+    padding: 2em 1em;
+    background-color: #f4f4f4; /* Optional: Background color for the section */
+}
+
+.services-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em; /* Space between the heading and the line */
+}
+
+.services-header h1 {
+    font-size: 3em; /* Adjust size as needed */
+    margin: 0;
+    color: #333; /* Adjust color as needed */
+    display: inline; /* Ensure the text stays in one line */
+}
+
+.yellow-line {
+    flex-grow: 1;
+    height: 4px; /* Adjust thickness as needed */
+    background-color: var(--button-bg-color); /* Dark yellow color */
+}
+
+/* Media Queries for Smaller Screens */
+@media screen and (max-width: 768px) {
+    .services-header {
+        justify-content: flex-start; /* Align items to the start (left) */
+        gap: 0.5em; /* Reduced gap for smaller screens */
+    }
+
+    .services-header h1 {
+        font-size: 2em; /* Smaller font size for smaller screens */
+        margin-right: 1em; /* Ensure there's space between text and line */
+    }
+
+    .yellow-line {
+        flex-grow: 0;
+        width: 100%;
+        height: 3px; /* Adjust thickness as needed */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .services-header h1 {
+        font-size: 1.5em; /* Even smaller font size for very small screens */
+        margin-right: 0.5em; /* Reduce margin for very small screens */
+    }
+
+    .yellow-line {
+        height: 2px; /* Adjust thickness as needed */
+    }
+}
+
+
+
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Decreased the minimum size */
+    gap: 1rem;
+    padding: 1rem; /* Reduced padding around the grid */
+    margin-top: 2rem;
+    background-color: #fff;
+}
+
+.service {
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.image-container {
+    width: 100%;
+    height: 150px; /* Reduced height of image container */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.service-description {
+    padding: 1rem; /* Reduced padding inside the service box */
+    text-align: center;
+}
+
+.service-description h2 {
+    font-size: 1.2rem; /* Reduced font size */
+    margin: 0 0 0.5rem 0; /* Reduced margin */
+}
+
+.service-description p {
+    font-size: 0.9rem; /* Reduced font size */
+    color: #666;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .services {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .services {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on larger screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .service {
+        padding: 1rem; /* Adjust padding for smaller screens */
+    }
+
+    .service-description h2 {
+        font-size: 1.25rem; /* Slightly smaller text on mobile */
+    }
+}
+ /* service section ends */
+
+
+ /* project section begins */
+
+ /* Hero Section Styling */
+section#project-hero {
+    background: url('images/project.jpg') no-repeat center center/cover;
+    height: 65dvh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    color: white;
+    text-align: center;
+    position: relative;
+    padding: 2em;
+    overflow: hidden;
+    margin-top: -60px;
+    padding-top: 60px;
+    background-position: 60% 40%;
+}
+
+section#project-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: Add a semi-transparent overlay */
+    z-index: 1;
+}
+
+section#project-hero .hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 2em;
+    animation: fadeIn 2s ease-in-out;
+}
+
+section#project-hero h1 {
+    font-size: 4em; /* Make the text huge */
+    margin: 0;
+    position: relative;
+    white-space: nowrap;
+    bottom: 20px;
+    left: 20px;
+}
+
+/* Projects Section Styling */
+section#projects {
+    padding: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project {
+    background: white;
+    margin: 1em;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgb(255, 255, 255);
+    flex-basis: calc(33.33% - 2em); /* Three images per row */
+    max-width: calc(33.33% - 2em);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+
+.image-container {
+    width: 100%;
+    height: 0;
+    padding-bottom: 75%; /* This creates a 4:3 aspect ratio */
+    position: relative;
+    overflow: hidden;
+    background-color: #f0f0f0; /* Optional: Add a background color */
+}
+
+.image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container while maintaining aspect ratio */
+}
+
+
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center; /* Centers the modal content horizontally */
+    align-items: center;    /* Centers the modal content vertically */
+}
+
+/* Modal content (image container) */
+.modal-content {
+    position: relative;
+    margin: auto;
+    width: 80%;  /* Consistent width for modal */
+    max-width: 800px;  /* Max width to prevent it from being too large */
+    height: 80vh; /* Consistent height for modal */
+    max-height: 600px;  /* Max height for the modal */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal image */
+.modal-image {
+    width: 100%;   /* Fit the image within the modal's width */
+    height: auto;  /* Maintain aspect ratio */
+    max-height: 100%; /* Ensure the image fits within the modal's height */
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Next & previous buttons */
+.controls {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.prev,
+.next {
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.3s;
+}
+
+.prev:hover,
+.next:hover {
+    color: #bbb;
+}
+
+
+
+
+.thumbnails {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+/* Thumbnail images */
+.thumbnails img {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.thumbnails img:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+    border: 2px solid #fff;
+}
+
+/* Active thumbnail */
+.thumbnails img.active {
+    border: 3px solid #fff;
+}
+
+
+
+
+
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+    .project {
+        flex-basis: calc(50% - 2em); /* Two containers per row */
+        max-width: calc(50% - 2em);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .project {
+        flex-basis: calc(100% - 2em); /* One container per row */
+        max-width: calc(100% - 2em);
+    }
+}
+
+/* project section ends */
+
+
+
+/* contact us section */
+
+
+:root {
+    --primary-bg-color: #fff;
+    --overlay-color: rgba(0, 0, 0, 0.5);
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --button-bg-color: gold; /* Dark yellow color */
+    --button-hover-color: rgb(206, 177, 15); /* Slightly darker yellow for hover */
+}
+
+section#contactus-hero {
+    background: url('ContactUs/contact.jpg') no-repeat center center/cover;
+    height: 65vh; /* fallback */
+    height: 65dvh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    color: white;
+    text-align: center;
+    position: relative;
+    padding: 2em;
+    overflow: hidden;
+    animation: zoomOutBackground 5s forwards;
+    margin-top: -60px;
+    padding-top: 60px;
+    background-position: center; /* Updated for better adaptability */
+    will-change: transform; /* Enhances animation performance */
+}
+
+@keyframes zoomOutBackground {
+    0% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+section#contactus-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--overlay-color); /* Using CSS variable */
+    z-index: 1;
+}
+
+section#contactus-hero .hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 2em;
+    animation: fadeIn 2s ease-in-out;
+    will-change: opacity, transform; /* Enhances animation performance */
+}
+
+section#contactus-hero h1 {
+    font-size: 4em; /* Large text */
+    margin: 0;
+    position: relative;
+    white-space: nowrap;
+    bottom: 20px;
+    left: 20px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Slight slide-up effect */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section#contactus {
+    padding: 2em;
+    text-align: center;
+}
+
+section#contactus .content {
+    background: var(--primary-bg-color); /* Using CSS variable */
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow); /* Using CSS variable */
+}
+
+section#contact {
+    padding: 2em;
+    text-align: center;
+    margin-top: 4em;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    background: white; /* Using CSS variable */
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Using CSS variable */
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.info-container {
+    flex: 1 1 45%;
+    margin-right: 2em;
+}
+
+.info-container h3{
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    color: #333;
+}
+
+.info-container h3 svg{
+    margin-right: 0.5em;
+    fill: gold;
+}
+
+.info-container p {
+    text-align: left;
+    color: #666;
+    line-height: 1.6;
+}
+
+.contact-container > .info-container{
+    width: 100%;
+}
+
+.form-container {
+    flex: 1 1 45%;
+    background: var(--primary-bg-color);
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    width: 100%;
+    max-width: 500px;
+}
+
+form h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 1em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+form textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+form button[type="submit"] {
+    background-color: var(--button-bg-color); /* Dark yellow */
+    color: white;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+    background-color: var(--button-hover-color); /* Darker yellow on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    section#contactus-hero h1 {
+        font-size: 2.5em; /* Adjust font size for smaller screens */
+    }
+
+    section#contactus-hero .hero-content,
+    .contact-container,
+    .form-container {
+        padding: 1em; /* Reduce padding for smaller screens */
+    }
+
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-container, 
+    .form-container {
+        flex: 1 1 100%;
+        margin: 0 0 2em; /* Margin at bottom for separation */
+        max-width: 100%; /* Allow full width */
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form textarea {
+        font-size: 1em; /* Adjust font size for smaller screens */
+    }
+}
+
+
+/* contact us section ends here */

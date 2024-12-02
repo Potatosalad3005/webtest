@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Sotau Limited | Zambia | Construction</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="header">
+        <nav>    
+            <ul class="sidebar">
+                <li onclick= hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="Projects.html">Projects</a></li>
+                <li><a href="ContactUs.html">Contact Us</a></li>
+            </ul>
+
+            <ul>
+                <li><a href="index.html"><img src="logos/sot1211whitewshadow.png"></a></li>
+                <li class="hideOnMobile"><a href="index.html">Home</a></li>
+                <li class="hideOnMobile"><a href="AboutUs.html">About Us</a></li>
+                <li class="hideOnMobile"><a href="Services.html">Services</a></li>
+                <li class="hideOnMobile"><a href="Projects.html">Projects</a></li>
+                <li class="hideOnMobile"><a href="ContactUs.html">Contact Us</a></li>
+                <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            </ul>
+        </div>
+        </nav>
+
+    </header>
+
+    <section id="project-hero">
+        <div class="hero-content">
+            <h1>Our Projects</h1>
+        </div>
+    </section>
+
+
+    <section>
+    <div class="project-details">
+        <h2>A selection of various projects we have worked on in our 5 years of operations </h2>
+    </div>
+    </section>
+
+    <section id="projects">
+        <div class="project">
+            <div class="image-container">
+            <img src="projects/8.jpg" alt="Project 1">
+        </div>
+        </div>
+        <div class="project">
+            <div class="image-container">
+            <img src="projects/10.jpg" alt="Project 2">
+        </div>
+        </div>
+        <div class="project">
+            <div class="image-container">
+            <img src="projects/5.jpg" alt="Project 3">
+        </div>
+        </div>
+        <div class="project">
+            <div class="image-container">
+            <img src="projects/1.jpg" alt="Project 4">
+        </div>
+        </div>
+        <div class="project">
+            <div class="image-container">
+            <img src="projects/2.jpg" alt="Profile 5">
+        </div>
+        </div>
+        <div class="project">
+            <div class="image-container">
+            <img src="projects/6.jpg" alt="Project 6">
+        </div>
+        </div>
+        <div class="project">
+            <div class="image-container">
+            <img src="projects/pro3.jpg" alt="Project 7">
+        </div>
+        </div>
+        <div class="project">
+            <div class="image-container">
+            <img src="projects/3.jpg" alt="Project 8">
+        </div>
+        </div>
+
+        <!-- Modal for image gallery -->
+<div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+        <img class="modal-image" id="modalImage" src="" alt="Expanded Image">
+        <div class="controls">
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        </div>
+        <div class="thumbnails" id="thumbnails"></div>
+            <!-- Thumbnails will be injected here by JavaScript -->
+        </div>
+    </div>
+</div>
+
+
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+            <h3>Our Location</h3>
+            <p>
+                HEADQUARTERS<br>
+                Plot 3061,<br>
+                Lilongwe Road<br>
+                Light Industrial Area<br>
+                Kitwe
+            </p>
+                </div>
+        <div class="footer-col">
+            <h3>Contact Details</h3>
+            <p>
+                +260969 154515 <br>
+                 +260955756405  <br>
+                Email: <a href="mailto:sotaultd@gmail.com">sotaultd@gmail.com</a>
+                | <a href="mailto:admin@sotaultd.co.zm">admin@sotau.com.zm</a>
+            </p>
+        </div>
+
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="AboutUs.html">About Us</a></li>
+                    <li><a href="Services.html">Services</a></li>
+                    <li><a href="Projects.html">Projects</a></li>
+                    <li><a href="ContactUs.html">Contact Us</a></li>
+                </ul>
+            </div>
+    <p>&copy; 2024 Sotau Limited. All rights reserved.</p>
+</footer>
+
+    
+
+</body>
+</html>
+
+
+<script>
+    function showSidebar(){
+     const sidebar = document.querySelector('.sidebar')
+     sidebar.style.display = 'flex'
+    }
+    function hideSidebar(){
+     const sidebar = document.querySelector('.sidebar')
+     sidebar.style.display = 'none'
+    }
+
+        //navbar hides and shows
+        let lastScrollTop = 0;
+        const navbar = document.querySelector('nav');
+        
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > lastScrollTop) {
+                // Scrolling down
+                navbar.style.top = '-100px'; // Adjust this value to hide the navbar off the screen
+            } else {
+                // Scrolling up
+                navbar.style.top = '0';
+            }
+            lastScrollTop = scrollTop;
+        });
+
+        // Array to store all project images
+        const projectImages = document.querySelectorAll('#projects img');
+        let currentSlideIndex = 0;
+        
+        function openModal(index) {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            
+            // Show modal
+            modal.style.display = 'block';
+            
+            // Display the clicked image
+            modalImage.src = projectImages[index].src;
+            currentSlideIndex = index;
+        
+            // Highlight the active thumbnail
+            highlightActiveThumbnail();
+        
+            // Generate thumbnails if they haven't been generated yet
+            generateThumbnails();
+        }
+        
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+        
+        function changeSlide(direction) {
+            currentSlideIndex += direction;
+        
+            // Wrap around if you go out of bounds
+            if (currentSlideIndex < 0) {
+                currentSlideIndex = projectImages.length - 1;
+            } else if (currentSlideIndex >= projectImages.length) {
+                currentSlideIndex = 0;
+            }
+        
+            // Update the modal image
+            const modalImage = document.getElementById('modalImage');
+            modalImage.src = projectImages[currentSlideIndex].src;
+        
+            // Highlight the active thumbnail
+            highlightActiveThumbnail();
+        }
+        
+        function generateThumbnails() {
+            const thumbnailContainer = document.getElementById('thumbnails');
+        
+            // Clear existing thumbnails if any
+            thumbnailContainer.innerHTML = '';
+        
+            // Loop through each project image and create a thumbnail
+            projectImages.forEach((img, index) => {
+                const thumbnail = document.createElement('img');
+                thumbnail.src = img.src;
+                thumbnail.alt = `Thumbnail ${index + 1}`;
+        
+                // Add click event to jump to the corresponding slide
+                thumbnail.addEventListener('click', () => {
+                    currentSlideIndex = index;
+                    openModal(index);
+                });
+        
+                thumbnailContainer.appendChild(thumbnail);
+            });
+        }
+        
+        function highlightActiveThumbnail() {
+            const thumbnails = document.querySelectorAll('#thumbnails img');
+            
+            // Remove active class from all thumbnails
+            thumbnails.forEach(thumb => thumb.classList.remove('active'));
+        
+            // Add active class to the current thumbnail
+            thumbnails[currentSlideIndex].classList.add('active');
+        }
+        
+        // Add click event to each project image to open the modal
+        projectImages.forEach((img, index) => {
+            img.addEventListener('click', () => openModal(index));
+        });
+        
+        
+ </script>
